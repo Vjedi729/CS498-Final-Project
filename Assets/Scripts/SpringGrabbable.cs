@@ -155,7 +155,7 @@ public class SpringGrabbable : MonoBehaviour
 
 	protected virtual void Start()
 	{
-		m_grabbedKinematic = GetComponent<Rigidbody>().isKinematic;
+		//m_grabbedKinematic = GetComponent<Rigidbody>().isKinematic;
 	}
 
 	void OnDestroy()
