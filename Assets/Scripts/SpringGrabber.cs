@@ -452,6 +452,7 @@ public class SpringGrabber : MonoBehaviour
 		if (m_grabbedObj == grabbable)
 		{
 			GrabbableRelease(Vector3.zero, Vector3.zero);
+			Destroy (this.GetComponent<SpringJoint> ());
 		}
 	}
 }

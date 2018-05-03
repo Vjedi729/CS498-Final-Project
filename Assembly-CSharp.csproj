@@ -248,6 +248,7 @@
      <Compile Include="Assets\SampleScenes\Hands\Scripts\PauseOnInputLoss.cs" />
      <Compile Include="Assets\SampleScenes\Hands\Scripts\TouchController.cs" />
      <Compile Include="Assets\Scripts\Lever.cs" />
+     <Compile Include="Assets\Scripts\MaxDistanceSpring.cs" />
      <Compile Include="Assets\Scripts\SpringGrabbable.cs" />
      <Compile Include="Assets\Scripts\SpringGrabber.cs" />
      <Compile Include="Assets\Scripts\WaterDispenser.cs" />
@@ -354,9 +355,6 @@
  </Reference>
  <Reference Include="UnityEditor.OSXStandalone.Extensions">
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll</HintPath>
- </Reference>
- <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
- <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Advertisements">
  <HintPath>C:/Users/galeks2/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/UnityEngine.Advertisements.dll</HintPath>
