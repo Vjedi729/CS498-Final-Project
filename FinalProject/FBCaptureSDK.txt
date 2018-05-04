@@ -1,0 +1,28 @@
+[ 2018-05-04 00:55:31 ] Capture SDK Version: : 1.30
+[ 2018-05-04 00:55:34 ][INFO] Graphics Card Info: : NVIDIA GeForce GTX TITAN Black
+[ 2018-05-04 00:55:34 ][INFO] Graphics Card Info: : Microsoft Basic Render Driver
+[ 2018-05-04 00:55:34 ][INFO] Start audio capture
+[ 2018-05-04 00:55:36 ][INFO] Released wave file resources
+[ 2018-05-04 00:55:36 ][INFO] Start audio transcoding
+[ 2018-05-04 00:55:36 ][INFO] Released audio capture devices
+[ 2018-05-04 00:57:37 ][INFO] Graphics Card Info: : NVIDIA GeForce GTX TITAN Black
+[ 2018-05-04 00:57:37 ][INFO] Graphics Card Info: : Microsoft Basic Render Driver
+[ 2018-05-04 00:57:37 ][INFO] Output folder already existed
+[ 2018-05-04 00:57:37 ][INFO] Start audio capture
+[ 2018-05-04 00:58:14 ][INFO] Released wave file resources
+[ 2018-05-04 00:58:14 ][INFO] Start audio transcoding
+[ 2018-05-04 00:58:15 ][INFO] Released audio capture devices
+[ 2018-05-04 00:58:44 ][INFO] Graphics Card Info: : NVIDIA GeForce GTX TITAN Black
+[ 2018-05-04 00:58:44 ][INFO] Graphics Card Info: : Microsoft Basic Render Driver
+[ 2018-05-04 00:58:44 ][INFO] Output folder already existed
+[ 2018-05-04 00:58:44 ][INFO] Start audio capture
+[ 2018-05-04 00:58:47 ][INFO] Released wave file resources
+[ 2018-05-04 00:58:47 ][INFO] Start audio transcoding
+[ 2018-05-04 00:58:47 ][INFO] Released audio capture devices
+[ 2018-05-04 00:59:07 ][INFO] Graphics Card Info: : NVIDIA GeForce GTX TITAN Black
+[ 2018-05-04 00:59:07 ][INFO] Graphics Card Info: : Microsoft Basic Render Driver
+[ 2018-05-04 00:59:07 ][INFO] Output folder already existed
+[ 2018-05-04 00:59:07 ][INFO] Start audio capture
+[ 2018-05-04 00:59:57 ][INFO] Released wave file resources
+[ 2018-05-04 00:59:57 ][INFO] Start audio transcoding
+[ 2018-05-04 00:59:58 ][INFO] Released audio capture devices

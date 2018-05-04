@@ -1,0 +1,71 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class AutomaticRoomScaler : MonoBehaviour {
+
+	public GameObject wallXp, wallXn, wallZp, wallZn, floor, ceiling;
+
+	public const float wallThickness = 0.1f;
+	public const float yThickness = 1.0f;
+
+	public const float wallHeight = 2.4384f; // = 8ft
+	public const float defZ = 1.524f; // = 5 ft
+	public const float defX = 2.1336f; // = 7 ft
+
+	private Vector3 roomDim;
+
+	// Use this for initialization
+	void Start () {
+		if (OVRManager.boundary.GetConfigured ()) {
+			roomDim = OVRManager.boundary.GetDimensions (OVRBoundary.BoundaryType.PlayArea);
+			roomDim.y = wallHeight;
+		} else {
+			roomDim = new Vector3 (defX, wallHeight, defZ);
+		}
+
+		wallXp.transform.localScale = wallXn.transform.localScale = getXscale ();
+		wallZp.transform.localScale = wallZn.transform.localScale = getZscale ();
+		ceiling.transform.localScale = floor.transform.localScale = getYscale ();
+
+		wallXp.transform.position = getXpos (false);
+		wallXn.transform.position = getXpos (true);;
+
+		wallZp.transform.position = getZpos (false);
+		wallZn.transform.position = getZpos (true);
+
+		ceiling.transform.position = new Vector3 (0, wallHeight + (yThickness / 2), 0);
+		floor.transform.position = new Vector3(0, -(yThickness/2), 0);
+	}
+	
+	// Update is called once per frame
+	void Update () {
+		
+	}
+
+	Vector3 getXscale(){
+		return new Vector3 (wallThickness, wallHeight /*+ 2*wallThickness*/, roomDim.z  /*+ 2*wallThickness*/);
+	}
+
+	Vector3 getZscale(){
+		return new Vector3 (roomDim.x /*+ 2*wallThickness*/, wallHeight /*+ 2*wallThickness*/, wallThickness);
+	}
+
+	Vector3 getYscale(){
+		return new Vector3 (roomDim.x /*+ 2*wallThickness*/, yThickness, roomDim.z /*+ 2*wallThickness*/);
+	}
+
+	Vector3 getZpos(bool negative){
+		if (negative) {
+			return new Vector3 (0, (wallHeight /*+ wallThickness*/)/2, -(roomDim.z + wallThickness) / 2);
+		}
+		return new Vector3 (0, (wallHeight /*+ wallThickness*/)/2, (roomDim.z + wallThickness) / 2);
+	}
+
+	Vector3 getXpos(bool negative){
+		if (negative) {
+			return new Vector3 ( -(roomDim.x + wallThickness) / 2, (wallHeight /*+ wallThickness*/) / 2, 0);
+		}
+		return new Vector3 ((roomDim.x + wallThickness) / 2, (wallHeight /*+ wallThickness*/) / 2, 0);
+	}
+}
