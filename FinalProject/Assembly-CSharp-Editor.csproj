@@ -62,7 +62,7 @@
      <Compile Include="Assets\OVR\Editor\OVRPluginUpdaterStub.cs" />
      <Compile Include="Assets\OVR\Editor\OVRScreenshotWizard.cs" />
      <Compile Include="Assets\OVR\Scripts\Editor\OVRManagerEditor.cs" />
-     <Compile Include="Assets\OvrAvatar\Editor\AvatarMaterialEditor.cs" />
+     <Compile Include="Assets\OVRAvatar\Editor\AvatarMaterialEditor.cs" />
      <None Include="Assets\OVR\Editor\AndroidManifest.OVRSubmission.xml" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

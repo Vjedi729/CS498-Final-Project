@@ -7,7 +7,9 @@ public class SetGlobalScale : MonoBehaviour {
 	public Vector3 globalScale;
 	public Transform transform;
 
-	bool scaled = false;
+	public bool scaleX, scaleY, scaleZ;
+
+	private bool scaled = false;
 
 	// Use this for initialization
 	void Start () {
@@ -22,11 +24,13 @@ public class SetGlobalScale : MonoBehaviour {
 	}
 
 	public void resetScale (){
+		Vector3 oldScale = transform.localScale;
+
 		transform.localScale = Vector3.one;
 		transform.localScale = new Vector3 (
-			globalScale.x/transform.lossyScale.x, 
-			globalScale.y/transform.lossyScale.y, 
-			globalScale.z/transform.lossyScale.z
+			(scaleX ? globalScale.x/transform.lossyScale.x : oldScale.x), 
+			(scaleY ? globalScale.y/transform.lossyScale.y : oldScale.y), 
+			(scaleZ ? globalScale.z/transform.lossyScale.z : oldScale.z)
 		);
 	}
 

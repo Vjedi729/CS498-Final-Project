@@ -6,6 +6,7 @@ public class Lever : MonoBehaviour {
 
 	private HingeJoint hinge;
 	public float rawPosition;
+	public float histeresisInDegrees = 20f;
 	public bool state;
 
 	// Use this for initialization
@@ -16,6 +17,12 @@ public class Lever : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		rawPosition = hinge.angle;
-		state = rawPosition > 0;
+		if (state && rawPosition > histeresisInDegrees) {
+			state = !state;
+		}
+		if (!state && rawPosition < -histeresisInDegrees) {
+			state = !state;
+		}
+		//state = rawPosition > 0;
 	}
 }

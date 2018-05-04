@@ -5,9 +5,13 @@ using UnityEngine;
 public class WaterDispenser : MonoBehaviour {
 
 	public GameObject triggeringLever;
+	public int maxNumberOfItems = 10;
 
 	private bool leverState = false;
 	private Lever leverComponent;
+	private int curNumberOfItems;
+	private List<GameObject> itemBuffer;
+
 
 	// Use this for initialization
 	void Start () {
@@ -16,6 +20,8 @@ public class WaterDispenser : MonoBehaviour {
 		}
 		leverComponent = triggeringLever.GetComponent<Lever> ();
 		leverState = leverComponent.state;
+		curNumberOfItems = 0;
+		itemBuffer = new List<GameObject> ();
 	}
 	
 	// Update is called once per frame
@@ -23,9 +29,18 @@ public class WaterDispenser : MonoBehaviour {
 		bool newState = leverComponent.state;
 		if (newState != leverState) {
 			leverState = newState;
-			GameObject waterBottle = GameObject.Instantiate (Resources.Load<GameObject> ("Prefabs/WaterBottle"));
+
+			if (curNumberOfItems >= maxNumberOfItems) {
+				GameObject.Destroy (itemBuffer [0]);
+				itemBuffer.RemoveAt (0);
+			}
+				
+			GameObject waterBottle = GameObject.Instantiate (Resources.Load<GameObject> ("Prefabs/WaterBottleClosed"));
 			waterBottle.transform.position = this.transform.position + new Vector3(0, 0.3f, 0);
 			waterBottle.transform.rotation = this.transform.rotation * waterBottle.transform.rotation;
+
+			itemBuffer.Add (waterBottle);
+			curNumberOfItems++;
 		}
 	}
 }

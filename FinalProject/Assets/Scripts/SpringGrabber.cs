@@ -75,6 +75,12 @@ public class SpringGrabber : MonoBehaviour
 	private float[] springForceBuffer;
 	private int springForceBufferPosition;
 
+	public float springForce = 1000f;
+	public float springDamper = 100f;
+	public float maxSpringForce = 500f;
+
+	public float maxDistance = 0.5f;
+
 	/// <summary>
 	/// The currently grabbed object.
 	/// </summary>
@@ -257,6 +263,9 @@ public class SpringGrabber : MonoBehaviour
 			for (int j = 0; j < grabbable.grabPoints.Length; ++j)
 			{
 				Collider grabbableCollider = grabbable.grabPoints[j];
+				if (grabbableCollider == null) {
+					continue;
+				}
 				// Store the closest grabbable
 				Vector3 closestPointOnBounds = grabbableCollider.ClosestPointOnBounds(m_gripTransform.position);
 				float grabbableMagSq = (m_gripTransform.position - closestPointOnBounds).sqrMagnitude;
@@ -317,7 +326,6 @@ public class SpringGrabber : MonoBehaviour
 				Quaternion relOri = Quaternion.Inverse(transform.rotation) * m_grabbedObj.transform.rotation;
 				m_grabbedObjectRotOff = relOri;
 			}
-			*/
 
 			// Note: force teleport on grab, to avoid high-speed travel to dest which hits a lot of other objects at high
 			// speed and sends them flying. The grabbed object may still teleport inside of other objects, but fixing that
@@ -328,14 +336,15 @@ public class SpringGrabber : MonoBehaviour
 			{
 				m_grabbedObj.transform.parent = transform;
 			}
+			*/
 
 			this.gameObject.AddComponent<SpringJoint> ();
 			SpringJoint sj = GetComponent<SpringJoint> ();
 
 			sj.connectedBody = m_grabbedObj.grabbedRigidbody;
-			sj.spring = 1000f;
-			sj.damper = 100f;
-			sj.breakForce = 500f;
+			sj.spring = springForce;
+			sj.damper = springDamper;
+			sj.breakForce = maxSpringForce;
 
 			springForceBuffer = new float[10];
 			springForceBufferPosition = 0;
@@ -351,17 +360,17 @@ public class SpringGrabber : MonoBehaviour
 		}
 
 		Rigidbody grabbedRigidbody = m_grabbedObj.grabbedRigidbody;
-		Vector3 grabbablePosition = pos + rot * m_grabbedObjectPosOff;
+		//Vector3 grabbablePosition = pos + rot * m_grabbedObjectPosOff;
 		Quaternion grabbableRotation = rot * m_grabbedObjectRotOff;
 
 		if (forceTeleport)
 		{
-			grabbedRigidbody.transform.position = grabbablePosition;
+			//grabbedRigidbody.transform.position = grabbablePosition;
 			grabbedRigidbody.transform.rotation = grabbableRotation;
 		}
 		else
 		{
-			grabbedRigidbody.MovePosition(grabbablePosition);
+			//grabbedRigidbody.MovePosition(grabbablePosition);
 			grabbedRigidbody.MoveRotation(grabbableRotation);
 		}
 	}
@@ -376,6 +385,15 @@ public class SpringGrabber : MonoBehaviour
 		if (GetComponent<SpringJoint> () != null) {
 			SpringJoint sj = GetComponent<SpringJoint> ();
 			//sj.anchor = pos;
+
+			if (sj.connectedBody == null) {
+				return;
+			}
+			float distance = (transform.position - sj.connectedBody.transform.position).magnitude;
+			if (distance > maxDistance) {
+				GrabEnd ();
+			}
+
 			springForceBuffer[(springForceBufferPosition++) % springForceBuffer.Length] = sj.currentForce.magnitude;
 
 			float avgForce = 0;
@@ -387,11 +405,11 @@ public class SpringGrabber : MonoBehaviour
 
 			//Debug.Log (avgForce);
 
-			if (avgForce < 200f) {
+			if (avgForce < (2f/5f) * maxSpringForce) {
 				return;
-			} else if (avgForce < 300f) {
+			} else if (avgForce < (3f/5f) * maxSpringForce) {
 				OVRHaptics.RightChannel.Preempt (clipLight);
-			} else if (avgForce < 400f) {
+			} else if (avgForce < (4f/5f) * maxSpringForce) {
 				OVRHaptics.RightChannel.Preempt (clipMedium);
 			} else {
 				OVRHaptics.RightChannel.Preempt (clipHard);

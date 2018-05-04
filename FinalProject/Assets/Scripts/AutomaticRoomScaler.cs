@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR;
 
 public class AutomaticRoomScaler : MonoBehaviour {
 
@@ -13,12 +14,21 @@ public class AutomaticRoomScaler : MonoBehaviour {
 	public const float defZ = 1.524f; // = 5 ft
 	public const float defX = 2.1336f; // = 7 ft
 
+	public float wallToSpaceBuffer;
+
 	private Vector3 roomDim;
 
 	// Use this for initialization
 	void Start () {
+		//gameObject.transform.position = OVRManager.tracker.GetPose (0).position;
+		OVRManager.instance.trackingOriginType = OVRManager.TrackingOrigin.FloorLevel;
+
+		//Debug.Log (transform.position);
+
 		if (OVRManager.boundary.GetConfigured ()) {
 			roomDim = OVRManager.boundary.GetDimensions (OVRBoundary.BoundaryType.PlayArea);
+			roomDim.x -= 2*wallToSpaceBuffer;
+			roomDim.z -= 2*wallToSpaceBuffer;
 			roomDim.y = wallHeight;
 		} else {
 			roomDim = new Vector3 (defX, wallHeight, defZ);
@@ -69,3 +79,4 @@ public class AutomaticRoomScaler : MonoBehaviour {
 		return new Vector3 ((roomDim.x + wallThickness) / 2, (wallHeight /*+ wallThickness*/) / 2, 0);
 	}
 }
+
