@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 136525830622858592}
   - component: {fileID: 23319406044438584}
   - component: {fileID: 114801576314886566}
+  - component: {fileID: 114285575316967200}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -41,6 +42,7 @@ GameObject:
   - component: {fileID: 33522914276581924}
   - component: {fileID: 65731636421094264}
   - component: {fileID: 23612590007881536}
+  - component: {fileID: 114604158320664184}
   m_Layer: 0
   m_Name: Stick
   m_TagString: Untagged
@@ -59,6 +61,7 @@ GameObject:
   - component: {fileID: 114997880719138324}
   - component: {fileID: 54384285676337938}
   - component: {fileID: 59095555013119936}
+  - component: {fileID: 114032224894936340}
   m_Layer: 0
   m_Name: Lever
   m_TagString: Untagged
@@ -214,7 +217,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: -0.1125, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.547, y: 0.7000531, z: 0.609702}
+  m_ConnectedAnchor: {x: 0, y: -0.1125, z: 0}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -250,6 +253,39 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114032224894936340
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1574789231652870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc92114669ef3fd4faf8ee29f95af38c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114285575316967200
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1300606971260128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc92114669ef3fd4faf8ee29f95af38c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114604158320664184
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1517100063883068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc92114669ef3fd4faf8ee29f95af38c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114801576314886566
 MonoBehaviour:
   m_ObjectHideFlags: 1

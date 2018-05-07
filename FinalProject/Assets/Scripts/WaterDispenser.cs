@@ -6,6 +6,7 @@ public class WaterDispenser : MonoBehaviour {
 
 	public GameObject triggeringLever;
 	public int maxNumberOfItems = 10;
+	public Vector3 spawnOffset = new Vector3(0, 0, 0);
 
 	private bool leverState = false;
 	private Lever leverComponent;
@@ -31,13 +32,16 @@ public class WaterDispenser : MonoBehaviour {
 			leverState = newState;
 
 			if (curNumberOfItems >= maxNumberOfItems) {
+				SanityChecker.removeFromSanityChecker (itemBuffer [0]);
 				GameObject.Destroy (itemBuffer [0]);
 				itemBuffer.RemoveAt (0);
 			}
 				
-			GameObject waterBottle = GameObject.Instantiate (Resources.Load<GameObject> ("Prefabs/WaterBottleClosed"));
-			waterBottle.transform.position = this.transform.position + new Vector3(0, 0.3f, 0);
+			GameObject waterBottle = GameObject.Instantiate (Resources.Load<GameObject> ("Prefabs/WaterBottleFull"));
+			waterBottle.transform.position = this.transform.position + spawnOffset;
 			waterBottle.transform.rotation = this.transform.rotation * waterBottle.transform.rotation;
+
+			SanityChecker.addToSanityChecker (waterBottle);
 
 			itemBuffer.Add (waterBottle);
 			curNumberOfItems++;

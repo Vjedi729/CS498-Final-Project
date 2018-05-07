@@ -1,0 +1,18 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\OVR\Scripts\Util\OVRGrabber.cs">
+    <Files>
+      <File FileName="Assets\Scripts\WaterDispenser.cs" Line="35" Column="60" />
+      <File FileName="Assets\Scripts\SanityChecker.cs" Line="7" Column="69" />
+      <File FileName="Assets\Scripts\ShouldSanityCheck.cs" Line="10" Column="3" />
+      <File FileName="Assets\Scripts\SetGlobalScale.cs" Line="27" Column="1" />
+      <File FileName="Assets\Scripts\FoodDispenser.cs" Line="25" Column="40" />
+      <File FileName="Assets\OVR\Scripts\Util\OVRGrabbable.cs" Line="133" Column="23" />
+      <File FileName="Assets\OVR\Scripts\Util\OVRGrabber.cs" Line="357" Column="6" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{3CB4B305-0BFA-4946-3C77-495B46B5FDC6}</ProjectGuid>
+    <ProjectGuid>{9DAF574B-E371-DBF5-A886-E16B0B0F1C47}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
@@ -62,7 +62,7 @@
      <Compile Include="Assets\OVR\Editor\OVRPluginUpdaterStub.cs" />
      <Compile Include="Assets\OVR\Editor\OVRScreenshotWizard.cs" />
      <Compile Include="Assets\OVR\Scripts\Editor\OVRManagerEditor.cs" />
-     <Compile Include="Assets\OVRAvatar\Editor\AvatarMaterialEditor.cs" />
+     <Compile Include="Assets\OvrAvatar\Editor\AvatarMaterialEditor.cs" />
      <None Include="Assets\OVR\Editor\AndroidManifest.OVRSubmission.xml" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
@@ -172,7 +172,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{D543F30A-CC37-C6BC-10DE-0B3079A121B6}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
+      <Project>{E1456745-ED92-4EB6-8905-E64DC1E47277}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

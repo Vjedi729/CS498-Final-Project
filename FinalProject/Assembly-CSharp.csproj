@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{D543F30A-CC37-C6BC-10DE-0B3079A121B6}</ProjectGuid>
+    <ProjectGuid>{E1456745-ED92-4EB6-8905-E64DC1E47277}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -51,6 +51,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\BrokenVector\LowPolySurvivalEssentials\Example\Scripts\AnimatedFire.cs" />
      <Compile Include="Assets\EncodePackage\Script\CaptureOption.cs" />
      <Compile Include="Assets\EncodePackage\Script\FPSScript.cs" />
      <Compile Include="Assets\EncodePackage\Script\NonSurroundCapture.cs" />
@@ -211,52 +212,57 @@
      <Compile Include="Assets\OVR\Scripts\Util\OVRScreenFade.cs" />
      <Compile Include="Assets\OVR\Scripts\Util\OVRTrackedRemote.cs" />
      <Compile Include="Assets\OVR\Scripts\Util\OVRWaitCursor.cs" />
-     <Compile Include="Assets\OVRAvatar\Samples\GripPoses\Scripts\PoseEditHelper.cs" />
-     <Compile Include="Assets\OVRAvatar\Samples\remoteloopback\Scripts\RemoteLoopbackManager.cs" />
-     <Compile Include="Assets\OVRAvatar\Samples\socialstarter\Assets\Scripts\P2PManager.cs" />
-     <Compile Include="Assets\OVRAvatar\Samples\socialstarter\Assets\Scripts\PlatformManager.cs" />
-     <Compile Include="Assets\OVRAvatar\Samples\socialstarter\Assets\Scripts\PlayerController.cs" />
-     <Compile Include="Assets\OVRAvatar\Samples\socialstarter\Assets\Scripts\RemotePlayer.cs" />
-     <Compile Include="Assets\OVRAvatar\Samples\socialstarter\Assets\Scripts\RoomManager.cs" />
-     <Compile Include="Assets\OVRAvatar\Samples\socialstarter\Assets\Scripts\VoipManager.cs" />
-     <Compile Include="Assets\OVRAvatar\Scripts\OvrAvatar.cs" />
-     <Compile Include="Assets\OVRAvatar\Scripts\OvrAvatarAsset.cs" />
-     <Compile Include="Assets\OVRAvatar\Scripts\OvrAvatarAssetMesh.cs" />
-     <Compile Include="Assets\OVRAvatar\Scripts\OvrAvatarAssetTexture.cs" />
-     <Compile Include="Assets\OVRAvatar\Scripts\OvrAvatarBase.cs" />
-     <Compile Include="Assets\OVRAvatar\Scripts\OvrAvatarBody.cs" />
-     <Compile Include="Assets\OVRAvatar\Scripts\OvrAvatarComponent.cs" />
-     <Compile Include="Assets\OVRAvatar\Scripts\OvrAvatarDriver.cs" />
-     <Compile Include="Assets\OVRAvatar\Scripts\OvrAvatarHand.cs" />
-     <Compile Include="Assets\OVRAvatar\Scripts\OvrAvatarLocalDriver.cs" />
-     <Compile Include="Assets\OVRAvatar\Scripts\OvrAvatarMeshInstance.cs" />
-     <Compile Include="Assets\OVRAvatar\Scripts\OvrAvatarPacket.cs" />
-     <Compile Include="Assets\OVRAvatar\Scripts\OvrAvatarProjectorRenderComponent.cs" />
-     <Compile Include="Assets\OVRAvatar\Scripts\OvrAvatarRemoteDriver.cs" />
-     <Compile Include="Assets\OVRAvatar\Scripts\OvrAvatarRenderComponent.cs" />
-     <Compile Include="Assets\OVRAvatar\Scripts\OvrAvatarSDKCAPI.cs" />
-     <Compile Include="Assets\OVRAvatar\Scripts\OvrAvatarSDKManager.cs" />
-     <Compile Include="Assets\OVRAvatar\Scripts\OvrAvatarSettings.cs" />
-     <Compile Include="Assets\OVRAvatar\Scripts\OvrAvatarSettingsEditor.cs" />
-     <Compile Include="Assets\OVRAvatar\Scripts\OvrAvatarSkinnedMeshRenderComponent.cs" />
-     <Compile Include="Assets\OVRAvatar\Scripts\OvrAvatarSkinnedMeshRenderPBSComponent.cs" />
-     <Compile Include="Assets\OVRAvatar\Scripts\OvrAvatarSkinnedMeshRenderPBSV2Component.cs" />
-     <Compile Include="Assets\OVRAvatar\Scripts\OvrAvatarTouchController.cs" />
+     <Compile Include="Assets\OvrAvatar\Samples\GripPoses\Scripts\PoseEditHelper.cs" />
+     <Compile Include="Assets\OvrAvatar\Samples\remoteloopback\Scripts\RemoteLoopbackManager.cs" />
+     <Compile Include="Assets\OvrAvatar\Samples\socialstarter\Assets\Scripts\P2PManager.cs" />
+     <Compile Include="Assets\OvrAvatar\Samples\socialstarter\Assets\Scripts\PlatformManager.cs" />
+     <Compile Include="Assets\OvrAvatar\Samples\socialstarter\Assets\Scripts\PlayerController.cs" />
+     <Compile Include="Assets\OvrAvatar\Samples\socialstarter\Assets\Scripts\RemotePlayer.cs" />
+     <Compile Include="Assets\OvrAvatar\Samples\socialstarter\Assets\Scripts\RoomManager.cs" />
+     <Compile Include="Assets\OvrAvatar\Samples\socialstarter\Assets\Scripts\VoipManager.cs" />
+     <Compile Include="Assets\OvrAvatar\Scripts\OvrAvatar.cs" />
+     <Compile Include="Assets\OvrAvatar\Scripts\OvrAvatarAsset.cs" />
+     <Compile Include="Assets\OvrAvatar\Scripts\OvrAvatarAssetMesh.cs" />
+     <Compile Include="Assets\OvrAvatar\Scripts\OvrAvatarAssetTexture.cs" />
+     <Compile Include="Assets\OvrAvatar\Scripts\OvrAvatarBase.cs" />
+     <Compile Include="Assets\OvrAvatar\Scripts\OvrAvatarBody.cs" />
+     <Compile Include="Assets\OvrAvatar\Scripts\OvrAvatarComponent.cs" />
+     <Compile Include="Assets\OvrAvatar\Scripts\OvrAvatarDriver.cs" />
+     <Compile Include="Assets\OvrAvatar\Scripts\OvrAvatarHand.cs" />
+     <Compile Include="Assets\OvrAvatar\Scripts\OvrAvatarLocalDriver.cs" />
+     <Compile Include="Assets\OvrAvatar\Scripts\OvrAvatarMeshInstance.cs" />
+     <Compile Include="Assets\OvrAvatar\Scripts\OvrAvatarPacket.cs" />
+     <Compile Include="Assets\OvrAvatar\Scripts\OvrAvatarProjectorRenderComponent.cs" />
+     <Compile Include="Assets\OvrAvatar\Scripts\OvrAvatarRemoteDriver.cs" />
+     <Compile Include="Assets\OvrAvatar\Scripts\OvrAvatarRenderComponent.cs" />
+     <Compile Include="Assets\OvrAvatar\Scripts\OvrAvatarSDKCAPI.cs" />
+     <Compile Include="Assets\OvrAvatar\Scripts\OvrAvatarSDKManager.cs" />
+     <Compile Include="Assets\OvrAvatar\Scripts\OvrAvatarSettings.cs" />
+     <Compile Include="Assets\OvrAvatar\Scripts\OvrAvatarSettingsEditor.cs" />
+     <Compile Include="Assets\OvrAvatar\Scripts\OvrAvatarSkinnedMeshRenderComponent.cs" />
+     <Compile Include="Assets\OvrAvatar\Scripts\OvrAvatarSkinnedMeshRenderPBSComponent.cs" />
+     <Compile Include="Assets\OvrAvatar\Scripts\OvrAvatarSkinnedMeshRenderPBSV2Component.cs" />
+     <Compile Include="Assets\OvrAvatar\Scripts\OvrAvatarTouchController.cs" />
      <Compile Include="Assets\Scripts\AutomaticRoomScaler.cs" />
+     <Compile Include="Assets\Scripts\Drinkable.cs" />
+     <Compile Include="Assets\Scripts\Edible.cs" />
+     <Compile Include="Assets\Scripts\FoodDispenser.cs" />
      <Compile Include="Assets\Scripts\Lever.cs" />
      <Compile Include="Assets\Scripts\MaxDistanceSpring.cs" />
+     <Compile Include="Assets\Scripts\SanityChecker.cs" />
      <Compile Include="Assets\Scripts\SetGlobalScale.cs" />
+     <Compile Include="Assets\Scripts\ShouldSanityCheck.cs" />
      <Compile Include="Assets\Scripts\SpringGrabbable.cs" />
      <Compile Include="Assets\Scripts\SpringGrabber.cs" />
      <Compile Include="Assets\Scripts\WaterDispenser.cs" />
-     <None Include="Assets\OVRAvatar\Content\Materials\AvatarMaterialStateShader.cginc" />
+     <None Include="Assets\OvrAvatar\Content\Materials\AvatarMaterialStateShader.cginc" />
      <None Include="Assets\OVR\Resources\OVRMRUnlitTransparent.shader" />
      <None Include="Assets\OVR\Resources\OVRMRChromaKey.cginc" />
      <None Include="Assets\EncodePackage\materials\Downsample.shader" />
      <None Include="Assets\OVR\Shaders\OVRColorRampAlpha.shader" />
-     <None Include="Assets\OVRAvatar\Content\Materials\AvatarSurfaceShader.shader" />
+     <None Include="Assets\OvrAvatar\Content\Materials\AvatarSurfaceShader.shader" />
      <None Include="Assets\OVR\Resources\Cubemap Blit.shader" />
-     <None Include="Assets\OVRAvatar\Content\Materials\AvatarSurfaceShaderSelfOccluding.shader" />
+     <None Include="Assets\OvrAvatar\Content\Materials\AvatarSurfaceShaderSelfOccluding.shader" />
      <None Include="Assets\EncodePackage\materials\CubemapDisplay.shader" />
      <None Include="Assets\OVR\Resources\OVRMRUnlit.shader" />
      <None Include="Assets\EncodePackage\materials\OVRDownsample.shader" />
@@ -266,14 +272,16 @@
      <None Include="Assets\OVR\Resources\Unlit Transparent Color.shader" />
      <None Include="Assets\EncodePackage\materials\FlippingTexture.shader" />
      <None Include="Assets\OVR\Resources\OVRMRCameraFrameLit.shader" />
-     <None Include="Assets\OVRAvatar\Content\Materials\AvatarSurfaceShaderPBSV2.shader" />
+     <None Include="Assets\OvrAvatar\Content\Materials\AvatarSurfaceShaderPBSV2.shader" />
      <None Include="Assets\OVR\Resources\Underlay Transparent Occluder.shader" />
      <None Include="Assets\OVR\Resources\Texture2D Blit.shader" />
-     <None Include="Assets\OVRAvatar\Content\Materials\AvatarSurfaceShaderPBS.shader" />
+     <None Include="Assets\OvrAvatar\Content\Materials\AvatarSurfaceShaderPBS.shader" />
      <None Include="Assets\EncodePackage\materials\CubemapToEquirect.shader" />
+     <None Include="Assets\BrokenVector\LowPolyShaders\Shaders\LowPolyPBRShader.shader" />
      <None Include="Assets\OVR\Resources\OVRMRCameraFrame.shader" />
-     <None Include="Assets\OVRAvatar\Samples\socialstarter\README.txt" />
+     <None Include="Assets\OvrAvatar\Samples\socialstarter\README.txt" />
      <None Include="Assets\OVR\Resources\OVRMRClipPlane.shader" />
+     <None Include="Assets\BrokenVector\LowPolyShaders\Shaders\LowPolyUnlitShader.shader" />
      <None Include="Assets\OVR\Resources\Underlay Impostor.shader" />
      <None Include="Assets\OVR\Plugins\placeholder.txt" />
  <Reference Include="UnityEngine.UI">

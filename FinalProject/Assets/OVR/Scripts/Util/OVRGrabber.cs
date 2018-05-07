@@ -61,7 +61,7 @@ public class OVRGrabber : MonoBehaviour
     protected Quaternion m_anchorOffsetRotation;
     protected Vector3 m_anchorOffsetPosition;
     protected float m_prevFlex;
-	protected OVRGrabbable m_grabbedObj = null;
+	public OVRGrabbable m_grabbedObj = null;
     protected Vector3 m_grabbedObjectPosOff;
     protected Quaternion m_grabbedObjectRotOff;
 	protected Dictionary<OVRGrabbable, int> m_grabCandidates = new Dictionary<OVRGrabbable, int>();
@@ -70,10 +70,12 @@ public class OVRGrabber : MonoBehaviour
     /// <summary>
     /// The currently grabbed object.
     /// </summary>
+	/*
     public OVRGrabbable grabbedObject
     {
-        get { return m_grabbedObj; }
+		get { return m_grabbedObj; }
     }
+    */
 
 	public void ForceRelease(OVRGrabbable grabbable)
     {
