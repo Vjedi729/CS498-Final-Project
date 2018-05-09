@@ -55,7 +55,7 @@ public static class OVRHaptics
 			OVRPlugin.HapticsDesc desc = OVRPlugin.GetControllerHapticsDesc((uint)OVRPlugin.Controller.RTouch);
 
 			SampleRateHz = desc.SampleRateHz;
-			SampleSizeInBytes = desc.SampleSizeInBytes;
+			SampleSizeInBytes = (desc.SampleSizeInBytes == 0) ? 10 : desc.SampleSizeInBytes; // Because this being 0 causes divide by zero errors
 			MinimumSafeSamplesQueued = desc.MinimumSafeSamplesQueued;
 			MinimumBufferSamplesCount = desc.MinimumBufferSamplesCount;
 			OptimalBufferSamplesCount = desc.OptimalBufferSamplesCount;

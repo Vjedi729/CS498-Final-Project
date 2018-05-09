@@ -122,19 +122,19 @@ public class SpringGrabber : MonoBehaviour
 	private void InitializeOVRHaptics() {
 		int count = 10;
 
-		clipLight = new OVRHapticsClip (count);
-		clipMedium = new OVRHapticsClip (count);
-		clipHard = new OVRHapticsClip (count);
+		byte[] clipLightSamples = new byte[count];
+		byte[] clipMediumSamples = new byte[count];
+		byte[] clipHardSamples = new byte[count];
 
 		for (int i = 0; i < count; i++) {
-			clipLight.Samples [i] = i % 2 == 0 ? (byte)0 : (byte)75;
-			clipMedium.Samples [i] = i % 2 == 0 ? (byte)0 : (byte)150;
-			clipHard.Samples [i] = i % 2 == 0 ? (byte)0 : (byte)255;
+			clipLightSamples [i] = (i % 2 == 0) ? (byte)0 : (byte)75;
+			clipMediumSamples [i] = i % 2 == 0 ? (byte)0 : (byte)150;
+			clipHardSamples [i] = i % 2 == 0 ? (byte)0 : (byte)255;
 		}
 
-		clipLight = new OVRHapticsClip (clipLight.Samples, clipLight.Samples.Length);
-		clipMedium = new OVRHapticsClip (clipMedium.Samples, clipMedium.Samples.Length);
-		clipHard = new OVRHapticsClip (clipHard.Samples, clipHard.Samples.Length);
+		clipLight = new OVRHapticsClip (clipLightSamples, count);
+		clipMedium = new OVRHapticsClip (clipMediumSamples, count);
+		clipHard = new OVRHapticsClip (clipHardSamples, count);
 	}
 
 	protected virtual void Start()
