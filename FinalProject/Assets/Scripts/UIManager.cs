@@ -51,9 +51,11 @@ public class UIManager : MonoBehaviour {
 
 		//manually deactivate resource groups one and two so that
 		//other scripts can find them
+		changeResourceTab(0);
+		/*
 		resourceGroups[1].SetActive(false);
 		resourceGroups[2].SetActive(false);
-
+		*/
 	}
 
 	void changeResourceTab (int change)
