@@ -164,12 +164,13 @@ public class ResourceManager : MonoBehaviour {
 		waterWaste += liquidWaste;
 	}
 
-	void goToSleep ()
+	public void goToSleep ()
 	{
+		Debug.Log ("BOTTOM TEXT");
 		while (resources ["Sleep"] < 100)
 		{
 			//stop sleeping if too hungry, thirsty, or air reserves are too low
-			if (resources ["Hunger"] < 10 || resources ["Hydration"] < 10 || resources ["Oxygen"] < 5)
+			if (resources ["Satiety"] < 10 || resources ["Hydration"] < 10 || resources ["Oxygen"] < 5)
 			{
 				return;
 			}
