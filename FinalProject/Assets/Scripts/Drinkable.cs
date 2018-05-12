@@ -3,11 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Drinkable : MonoBehaviour {
+
+	private ResourceManager rm;
+	private int value = 5;
+
 	private float drinkDistance = 0.175f;
 	private GameObject eyeCenter;
 
 	// Use this for initialization
 	void Start () {
+		rm = GameObject.FindObjectOfType<ResourceManager> ();
+		rm.loseResource ("Water", value);
+
 		eyeCenter = GameObject.Find ("CenterEyeAnchor");
 	}
 
@@ -28,6 +35,7 @@ public class Drinkable : MonoBehaviour {
 					emptyBottle.transform.position = pos;
 					emptyBottle.transform.rotation = rot;
 
+					rm.addResource ("Hydration", value);
 					GameObject.Destroy (this.gameObject);
 				}
 			}
