@@ -17,6 +17,7 @@ public class AutomaticRoomScaler : MonoBehaviour {
 	public float wallToSpaceBuffer;
 
 	private Vector3 roomDim;
+	public Announcer roomDone = new Announcer();
 
 	// Use this for initialization
 	void Start () {
@@ -46,11 +47,13 @@ public class AutomaticRoomScaler : MonoBehaviour {
 
 		ceiling.transform.position = new Vector3 (0, wallHeight + (yThickness / 2), 0);
 		floor.transform.position = new Vector3(0, -(yThickness/2), 0);
+
+		roomDone.Announce ();
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
-		
+
 	}
 
 	Vector3 getXscale(){
@@ -78,5 +81,15 @@ public class AutomaticRoomScaler : MonoBehaviour {
 		}
 		return new Vector3 ((roomDim.x + wallThickness) / 2, (wallHeight /*+ wallThickness*/) / 2, 0);
 	}
-}
 
+	/*
+	 * Gets a position in the scaled room based on a Vector 3 where:
+	 * X is between -1 and 1, with 0 being the center of the room
+	 * Z is between -1 and 1, with 0 being the center of the room
+	 * Y is between 0 and 1, with 0 being the floor
+	 */
+	public Vector3 getPosInRoom(Vector3 inRoomLocation){
+		return new Vector3 (inRoomLocation.x * roomDim.x / 2, inRoomLocation.y * roomDim.y, inRoomLocation.z * roomDim.z / 2);
+	}
+		
+}
