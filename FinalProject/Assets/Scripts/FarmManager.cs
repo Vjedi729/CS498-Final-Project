@@ -83,7 +83,7 @@ public class FarmManager : MonoBehaviour {
 		{
 			plots [i] = new farmPlot ();
 		}
-		InvokeRepeating ("farmUpkeep", 0.0f, 30.0f);
+		InvokeRepeating ("farmUpkeep", 0.0f, 5.0f);
 	}
 
 	void farmUpkeep ()
@@ -95,7 +95,7 @@ public class FarmManager : MonoBehaviour {
 				//TODO: Handle when the player can't meet the upkeep more elegantly/handle partial upkeeps at all
 				if (resourceManager.loseResource (FARM_UPKEEP_RESOURCES, Mathf.CeilToInt (plot.cropSize / 20)))
 				{
-					plot.maturity++;
+					plot.maturity += 5;
 				} else
 				{
 					//lose 25% of crop if you can't meet the upkeep

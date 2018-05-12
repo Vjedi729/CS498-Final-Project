@@ -8,6 +8,7 @@ public class WaterDispenser : MonoBehaviour {
 	public int maxNumberOfItems = 10;
 	public Vector3 spawnOffset = new Vector3(0, 0, 0);
 
+	private ResourceManager rm;
 	private bool leverState = false;
 	private Lever leverComponent;
 	private int curNumberOfItems;
@@ -23,6 +24,7 @@ public class WaterDispenser : MonoBehaviour {
 		leverState = leverComponent.state;
 		curNumberOfItems = 0;
 		itemBuffer = new List<GameObject> ();
+		rm = GameObject.FindObjectOfType<ResourceManager> ();
 	}
 	
 	// Update is called once per frame
@@ -36,15 +38,18 @@ public class WaterDispenser : MonoBehaviour {
 				GameObject.Destroy (itemBuffer [0]);
 				itemBuffer.RemoveAt (0);
 			}
-				
-			GameObject waterBottle = GameObject.Instantiate (Resources.Load<GameObject> ("Prefabs/WaterBottleFull"));
-			waterBottle.transform.position = this.transform.position + spawnOffset;
-			waterBottle.transform.rotation = this.transform.rotation * waterBottle.transform.rotation;
 
-			SanityChecker.addToSanityChecker (waterBottle);
+			// Try to spawn in water
+			if (rm.loseResource ("Water", 5)) {
+				GameObject waterBottle = GameObject.Instantiate (Resources.Load<GameObject> ("Prefabs/WaterBottleFull"));
+				waterBottle.transform.position = this.transform.position + spawnOffset;
+				waterBottle.transform.rotation = this.transform.rotation * waterBottle.transform.rotation;
 
-			itemBuffer.Add (waterBottle);
-			curNumberOfItems++;
+				SanityChecker.addToSanityChecker (waterBottle);
+
+				itemBuffer.Add (waterBottle);
+				curNumberOfItems++;
+			}
 		}
 	}
 }

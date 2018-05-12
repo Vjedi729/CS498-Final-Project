@@ -31,7 +31,7 @@ public class ResourceManager : MonoBehaviour {
 		initializeResources ();
 
 		//call applies the over-time-rates to each resource that has one every 30 seconds
-		InvokeRepeating ("resourceTick", 0.0f, 30.0f);
+		InvokeRepeating ("resourceTick", 0.0f, 5.0f);
 	}
 
 	void Awake () 
@@ -81,7 +81,7 @@ public class ResourceManager : MonoBehaviour {
 		// FIXME Temporary replacement for fusion reactor
 		addResource ("Carbon", 1);
 		addResource ("Oxygen", 1);
-		loseResource ("Hydrogen", 30);
+		//loseResource ("Hydrogen", 8);
 		addResource ("Power", 2);
 
 		updateSliders();

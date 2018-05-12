@@ -32,15 +32,22 @@ public class Sleep : MonoBehaviour {
 		//be sure to make goToSleep public in the resouce manager
 		if (coll.gameObject.CompareTag ("MainCamera")) 
 		{
-			rm.goToSleep ();
-			StartCoroutine(fadeToBlack());
+			//rm.goToSleep ();
+			//StartCoroutine(fadeToBlack());
+			cover.CrossFadeAlpha (1, 1.0f, false);
 		}
 			
 	}
 
+	void OnTriggerExit(Collider coll) {
+
+		if (coll.gameObject.CompareTag ("MainCamera")) {
+			cover.CrossFadeAlpha (0, 2.0f, false);
+		}
+	}
+
 	IEnumerator fadeToBlack ()
 	{
-		Debug.Log ("YOU DID IT REDDIT");
 		cover.CrossFadeAlpha (1, 1.0f, false);
 		yield return new WaitForSeconds (1.0f);
 		cover.CrossFadeAlpha (0, 2.0f, false);

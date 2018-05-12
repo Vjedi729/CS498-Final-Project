@@ -12,12 +12,7 @@ public class Drinkable : MonoBehaviour {
 
 	void Awake() {
 		eyeCenter = GameObject.Find ("CenterEyeAnchor");
-	}
-
-	// Use this for initialization
-	void Start () {
 		rm = GameObject.FindObjectOfType<ResourceManager> ();
-		rm.loseResource ("Water", value);
 	}
 
 	// Update is called once per frame
@@ -30,8 +25,6 @@ public class Drinkable : MonoBehaviour {
 				    (this.gameObject.GetComponent<SpringGrabbable> () != null && this.gameObject.GetComponent<SpringGrabbable> ().isGrabbed)) {
 					Vector3 pos = gameObject.transform.position;
 					Quaternion rot = gameObject.transform.rotation;
-
-
 
 					GameObject emptyBottle = GameObject.Instantiate<GameObject> (Resources.Load<GameObject> ("Prefabs/WaterBottleEmpty"));
 					emptyBottle.transform.position = pos;

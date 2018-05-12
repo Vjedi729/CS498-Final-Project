@@ -8,6 +8,7 @@ public class FoodDispenser : MonoBehaviour {
 	public int maxNumberOfItems = 10;
 	public Vector3 spawnOffset = new Vector3(0, 0, 0);
 
+	private ResourceManager rm;
 	private bool leverState = false;
 	private Lever leverComponent;
 	private int curNumberOfItems;
@@ -23,6 +24,7 @@ public class FoodDispenser : MonoBehaviour {
 		leverState = leverComponent.state;
 		curNumberOfItems = 0;
 		itemBuffer = new List<GameObject> ();
+		rm = GameObject.FindObjectOfType<ResourceManager> ();
 	}
 
 	// Update is called once per frame
@@ -37,14 +39,18 @@ public class FoodDispenser : MonoBehaviour {
 				itemBuffer.RemoveAt (0);
 			}
 
-			GameObject apple = GameObject.Instantiate (Resources.Load<GameObject> ("Prefabs/Apple"));
-			apple.transform.position = this.transform.position + spawnOffset;
-			apple.transform.rotation = this.transform.rotation * apple.transform.rotation;
+			// Try to consume the resources and spawn in an object
+			if (rm.loseResource ("Food", 5)) {
+				GameObject apple = GameObject.Instantiate (Resources.Load<GameObject> ("Prefabs/Apple"));
+				apple.transform.position = this.transform.position + spawnOffset;
+				apple.transform.rotation = this.transform.rotation * apple.transform.rotation;
 
-			SanityChecker.addToSanityChecker (apple);
+				SanityChecker.addToSanityChecker (apple);
 
-			itemBuffer.Add (apple);
-			curNumberOfItems++;
+				itemBuffer.Add (apple);
+				curNumberOfItems++;
+			}
+
 		}
 	}
 }
