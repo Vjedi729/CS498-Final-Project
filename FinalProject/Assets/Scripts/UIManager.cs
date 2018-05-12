@@ -31,6 +31,8 @@ public class UIManager : MonoBehaviour {
 	private Color red = Color.red;
 	private bool currentlyChangingColor = false;
 
+	public float autoResourceScreenChangeTime = 5.0f;
+	public float resouceScreenStayTimeAfterPress = 10.0f;
 
 	// Use this for initialization
 	void Start ()
@@ -51,7 +53,7 @@ public class UIManager : MonoBehaviour {
 
 		//manually deactivate resource groups one and two so that
 		//other scripts can find them
-		changeResourceTab(0);
+		autoChangeResourceTab();
 		/*
 		resourceGroups[1].SetActive(false);
 		resourceGroups[2].SetActive(false);
@@ -60,6 +62,7 @@ public class UIManager : MonoBehaviour {
 
 	void changeResourceTab (int change)
 	{
+		CancelInvoke ("autoChangeResourceTab");
 		currentResourceGroup += change;
 
 		//wraps around
@@ -82,6 +85,36 @@ public class UIManager : MonoBehaviour {
 				resourceGroup.SetActive (true);
 			}
 		}
+
+		Invoke ("autoChangeResourceTab", resouceScreenStayTimeAfterPress);
+	}
+
+	void autoChangeResourceTab ()
+	{
+		currentResourceGroup += 1;
+
+		//wraps around
+		if (currentResourceGroup > 2)
+		{
+			currentResourceGroup = 0;
+		} else if (currentResourceGroup < 0)
+		{
+			currentResourceGroup = 2;
+		}
+
+		//disable all but the proper resource group
+		foreach (GameObject resourceGroup in resourceGroups)
+		{
+			if (resourceGroup != resourceGroups [currentResourceGroup])
+			{
+				resourceGroup.SetActive (false);
+			} else
+			{
+				resourceGroup.SetActive (true);
+			}
+		}
+
+		Invoke ("autoChangeResourceTab", autoResourceScreenChangeTime);
 	}
 
 	public void updatePlotInfo ()
