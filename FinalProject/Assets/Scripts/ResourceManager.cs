@@ -78,6 +78,12 @@ public class ResourceManager : MonoBehaviour {
 		loseResource ("Power", powerConsumedRate);
 		addResource ("Hydrogen", hydrogenGainedRate);
 
+		// FIXME Temporary replacement for fusion reactor
+		addResource ("Carbon", 1);
+		addResource ("Oxygen", 1);
+		loseResource ("Hydrogen", 30);
+		addResource ("Power", 2);
+
 		updateSliders();
 
 	}

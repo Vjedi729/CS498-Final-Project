@@ -1,6 +1,6 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Sleep.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\ResourceManager.cs">
     <Files>
       <File FileName="Assets\OVR\Scripts\OVRHapticsClip.cs" Line="1" Column="1" />
       <File FileName="Assets\OVR\Scripts\OVRHaptics.cs" Line="1" Column="1" />
@@ -9,8 +9,8 @@
       <File FileName="Assets\Scripts\UIManager.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Edible.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Drinkable.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Sleep.cs" Line="14" Column="44" />
-      <File FileName="Assets\Scripts\ResourceManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Sleep.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\ResourceManager.cs" Line="81" Column="52" />
       <File FileName="Assets\Scripts\FarmManager.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\WaterDispenser.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\SetGlobalScale.cs" Line="1" Column="1" />
