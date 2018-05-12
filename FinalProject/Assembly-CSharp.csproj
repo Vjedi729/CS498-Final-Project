@@ -255,6 +255,7 @@
      <Compile Include="Assets\Scripts\SanityChecker.cs" />
      <Compile Include="Assets\Scripts\SetGlobalScale.cs" />
      <Compile Include="Assets\Scripts\ShouldSanityCheck.cs" />
+     <Compile Include="Assets\Scripts\Sleep.cs" />
      <Compile Include="Assets\Scripts\SpringGrabbable.cs" />
      <Compile Include="Assets\Scripts\SpringGrabber.cs" />
      <Compile Include="Assets\Scripts\UIManager.cs" />
