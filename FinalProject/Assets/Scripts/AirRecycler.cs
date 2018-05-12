@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class AirRecycler : MonoBehaviour {
 
+	bool hasUpdated = false;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -11,11 +13,19 @@ public class AirRecycler : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (this.gameObject.transform.childCount == 4) {
-			Debug.Log ("Have 4 kids now");
+		if (this.gameObject.transform.childCount == 5 && !hasUpdated) {
+			hasUpdated = true;
+
 			GetComponent<MeshCollider> ().convex = true;
 			GetComponent<Rigidbody> ().isKinematic = false;
-			//this.gameObject.AddComponent<OVRGrabbable> ();
+			GetComponent<Rigidbody> ().useGravity = true;
+			this.gameObject.AddComponent<OVRGrabbable> ();
+			OVRGrabbable ovr = GetComponent<OVRGrabbable> ();
+			ovr.enabled = true;
+
+			Collider[] cols = new Collider[] {GetComponent<MeshCollider> ()};
+
+			ovr.setColliders (cols);
 		}
 	}
 }

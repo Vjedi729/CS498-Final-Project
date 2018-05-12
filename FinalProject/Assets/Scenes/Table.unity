@@ -198,138 +198,29 @@ Prefab:
       propertyPath: m_Name
       value: Air Recycler Base
       objectReference: {fileID: 0}
-    - target: {fileID: 54036728765354234, guid: 3dae5cd90cdb6f34eb92817ac2f5f939,
+    - target: {fileID: 114388645315577842, guid: 3dae5cd90cdb6f34eb92817ac2f5f939,
         type: 2}
-      propertyPath: m_CollisionDetection
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 23109702634030110, guid: 3dae5cd90cdb6f34eb92817ac2f5f939,
-        type: 2}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: connectedObj
       value: 
-      objectReference: {fileID: 2100000, guid: eb00dbc6a9c69bd448b157ce84817eb6, type: 2}
-    m_RemovedComponents:
-    - {fileID: 54036728765354234, guid: 3dae5cd90cdb6f34eb92817ac2f5f939, type: 2}
-    - {fileID: 114224485754200772, guid: 3dae5cd90cdb6f34eb92817ac2f5f939, type: 2}
+      objectReference: {fileID: 2069545298}
+    - target: {fileID: 114737437651122248, guid: 3dae5cd90cdb6f34eb92817ac2f5f939,
+        type: 2}
+      propertyPath: connectedObj
+      value: 
+      objectReference: {fileID: 733103151}
+    - target: {fileID: 114462236036842372, guid: 3dae5cd90cdb6f34eb92817ac2f5f939,
+        type: 2}
+      propertyPath: connectedObj
+      value: 
+      objectReference: {fileID: 1960995008}
+    - target: {fileID: 114245016594378662, guid: 3dae5cd90cdb6f34eb92817ac2f5f939,
+        type: 2}
+      propertyPath: connectedObj
+      value: 
+      objectReference: {fileID: 1905913036}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3dae5cd90cdb6f34eb92817ac2f5f939, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &726025335 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1754159525795586, guid: 3dae5cd90cdb6f34eb92817ac2f5f939,
-    type: 2}
-  m_PrefabInternal: {fileID: 726025334}
---- !u!64 &726025336
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 726025335}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300000, guid: 3b84640f82db9b941b7264abb52324ac, type: 3}
---- !u!114 &726025337
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 726025335}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f749e52a18034945882c8f353b36675, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  connectedObj: {fileID: 2069545298}
-  force: 0.2
-  minDistance: 0.1
-  maxDistance: 100
-  attachmentOffset: {x: -0.09125, y: -0.09125, z: 0}
-  connectedAttachmentOffset: {x: 0, y: 0, z: 0.15}
-  finalAttachedOffset: {x: -0.085, y: -0.085, z: -0.05}
---- !u!54 &726025338
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 726025335}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 2
---- !u!114 &726025339
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 726025335}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f749e52a18034945882c8f353b36675, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  connectedObj: {fileID: 733103151}
-  force: 0.2
-  minDistance: 0.1
-  maxDistance: 100
-  attachmentOffset: {x: -0.09125, y: 0.09125, z: 0}
-  connectedAttachmentOffset: {x: 0, y: 0, z: 0.15}
-  finalAttachedOffset: {x: -0.085, y: 0.085, z: -0.05}
---- !u!114 &726025340
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 726025335}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f749e52a18034945882c8f353b36675, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  connectedObj: {fileID: 1960995008}
-  force: 0.2
-  minDistance: 0.1
-  maxDistance: 100
-  attachmentOffset: {x: 0.09125, y: 0.09125, z: 0}
-  connectedAttachmentOffset: {x: 0, y: 0, z: 0.15}
-  finalAttachedOffset: {x: 0.085, y: 0.085, z: -0.05}
---- !u!114 &726025341
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 726025335}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f749e52a18034945882c8f353b36675, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  connectedObj: {fileID: 1905913036}
-  force: 0.2
-  minDistance: 0.1
-  maxDistance: 100
-  attachmentOffset: {x: 0.09125, y: -0.09125, z: 0}
-  connectedAttachmentOffset: {x: 0, y: 0, z: 0.15}
-  finalAttachedOffset: {x: 0.085, y: -0.085, z: -0.05}
---- !u!114 &726025342
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 726025335}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4539ee38567574b4fa4c53f5d2df0e8d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &733103150
 Prefab:
   m_ObjectHideFlags: 0
@@ -373,23 +264,6 @@ Prefab:
       propertyPath: m_Name
       value: Air Recycler Air Intake
       objectReference: {fileID: 0}
-    - target: {fileID: 4225555806681370, guid: 6576357bf3f5db142a8d19f9c51db80f, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 0.032
-      objectReference: {fileID: 0}
-    - target: {fileID: 4225555806681370, guid: 6576357bf3f5db142a8d19f9c51db80f, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0.032
-      objectReference: {fileID: 0}
-    - target: {fileID: 4225555806681370, guid: 6576357bf3f5db142a8d19f9c51db80f, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 0.03
-      objectReference: {fileID: 0}
-    - target: {fileID: 23811908130053930, guid: 6576357bf3f5db142a8d19f9c51db80f,
-        type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 28168daa05b8f144eb9dc5a48c202cc7, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6576357bf3f5db142a8d19f9c51db80f, type: 2}
   m_IsPrefabParent: 0
@@ -398,49 +272,6 @@ GameObject:
   m_PrefabParentObject: {fileID: 1808147470807338, guid: 6576357bf3f5db142a8d19f9c51db80f,
     type: 2}
   m_PrefabInternal: {fileID: 733103150}
---- !u!65 &733103152
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 733103151}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 3.8784328, y: 4.0838847, z: 13.062071}
-  m_Center: {x: 0.1452114, y: 0.01627157, z: -5.474898}
---- !u!114 &733103153
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 733103151}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_allowOffhandGrab: 1
-  m_snapPosition: 0
-  m_snapOrientation: 0
-  m_snapOffset: {fileID: 0}
-  m_grabPoints: []
---- !u!54 &733103154
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 733103151}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 2
 --- !u!1 &981338233
 GameObject:
   m_ObjectHideFlags: 0
@@ -1064,23 +895,6 @@ Prefab:
       propertyPath: m_Name
       value: Air Recycler Zappy
       objectReference: {fileID: 0}
-    - target: {fileID: 4513462798701954, guid: 2ae84256b4540ef4996ef7877b4513c4, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 0.028
-      objectReference: {fileID: 0}
-    - target: {fileID: 4513462798701954, guid: 2ae84256b4540ef4996ef7877b4513c4, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0.03
-      objectReference: {fileID: 0}
-    - target: {fileID: 4513462798701954, guid: 2ae84256b4540ef4996ef7877b4513c4, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 0.028
-      objectReference: {fileID: 0}
-    - target: {fileID: 23076601222584540, guid: 2ae84256b4540ef4996ef7877b4513c4,
-        type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: eb00dbc6a9c69bd448b157ce84817eb6, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2ae84256b4540ef4996ef7877b4513c4, type: 2}
   m_IsPrefabParent: 0
@@ -1089,62 +903,6 @@ GameObject:
   m_PrefabParentObject: {fileID: 1591308984972946, guid: 2ae84256b4540ef4996ef7877b4513c4,
     type: 2}
   m_PrefabInternal: {fileID: 1905913035}
---- !u!136 &1905913037
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1905913036}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 1.6676273
-  m_Height: 12.019775
-  m_Direction: 2
-  m_Center: {x: 0.08587113, y: -0.30654842, z: -5.983303}
---- !u!114 &1905913038
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1905913036}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_allowOffhandGrab: 1
-  m_snapPosition: 0
-  m_snapOrientation: 0
-  m_snapOffset: {fileID: 0}
-  m_grabPoints: []
---- !u!54 &1905913039
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1905913036}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 2
---- !u!65 &1905913040
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1905913036}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 3.7801468, y: 2.9329548, z: 11.913366}
-  m_Center: {x: 0.014220762, y: 0.96647894, z: -5.889868}
 --- !u!1001 &1960995007
 Prefab:
   m_ObjectHideFlags: 0
@@ -1188,23 +946,6 @@ Prefab:
       propertyPath: m_Name
       value: Air Recycler Air Output
       objectReference: {fileID: 0}
-    - target: {fileID: 4112232448974410, guid: 552bb5b7579064146939fed51611d89a, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 0.03
-      objectReference: {fileID: 0}
-    - target: {fileID: 4112232448974410, guid: 552bb5b7579064146939fed51611d89a, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0.03
-      objectReference: {fileID: 0}
-    - target: {fileID: 4112232448974410, guid: 552bb5b7579064146939fed51611d89a, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 0.03
-      objectReference: {fileID: 0}
-    - target: {fileID: 23833760090866738, guid: 552bb5b7579064146939fed51611d89a,
-        type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: eb00dbc6a9c69bd448b157ce84817eb6, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 552bb5b7579064146939fed51611d89a, type: 2}
   m_IsPrefabParent: 0
@@ -1213,62 +954,6 @@ GameObject:
   m_PrefabParentObject: {fileID: 1385004058672496, guid: 552bb5b7579064146939fed51611d89a,
     type: 2}
   m_PrefabInternal: {fileID: 1960995007}
---- !u!136 &1960995009
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1960995008}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 2.73
-  m_Height: 11.816458
-  m_Direction: 2
-  m_Center: {x: 0.017657874, y: 0.040566422, z: -5.8099165}
---- !u!114 &1960995010
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1960995008}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_allowOffhandGrab: 1
-  m_snapPosition: 0
-  m_snapOrientation: 0
-  m_snapOffset: {fileID: 0}
-  m_grabPoints: []
---- !u!54 &1960995011
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1960995008}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 2
---- !u!65 &1960995012
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1960995008}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 4, y: 4, z: 11.880622}
-  m_Center: {x: 0, y: 8.999145e-14, z: -5.8589563}
 --- !u!1 &1983463025
 GameObject:
   m_ObjectHideFlags: 0
@@ -1430,23 +1115,6 @@ Prefab:
       propertyPath: m_Name
       value: Air Recycler Bubble Chamber
       objectReference: {fileID: 0}
-    - target: {fileID: 4941864192750364, guid: d0989c8857f672c4d833a6c582657b42, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 0.032
-      objectReference: {fileID: 0}
-    - target: {fileID: 4941864192750364, guid: d0989c8857f672c4d833a6c582657b42, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0.032
-      objectReference: {fileID: 0}
-    - target: {fileID: 4941864192750364, guid: d0989c8857f672c4d833a6c582657b42, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 0.03
-      objectReference: {fileID: 0}
-    - target: {fileID: 23891704086217030, guid: d0989c8857f672c4d833a6c582657b42,
-        type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 2ccc3c5a86d17dc4d9272b5867545be3, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d0989c8857f672c4d833a6c582657b42, type: 2}
   m_IsPrefabParent: 0
@@ -1455,46 +1123,3 @@ GameObject:
   m_PrefabParentObject: {fileID: 1610045952377272, guid: d0989c8857f672c4d833a6c582657b42,
     type: 2}
   m_PrefabInternal: {fileID: 2069545297}
---- !u!65 &2069545299
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2069545298}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 4.6297755, y: 4.5657277, z: 12.040635}
-  m_Center: {x: -0.06983801, y: -0.012669339, z: -6.071225}
---- !u!114 &2069545300
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2069545298}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_allowOffhandGrab: 1
-  m_snapPosition: 0
-  m_snapOrientation: 0
-  m_snapOffset: {fileID: 0}
-  m_grabPoints: []
---- !u!54 &2069545301
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2069545298}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 2

@@ -10,12 +10,14 @@ public class Drinkable : MonoBehaviour {
 	private float drinkDistance = 0.175f;
 	private GameObject eyeCenter;
 
+	void Awake() {
+		eyeCenter = GameObject.Find ("CenterEyeAnchor");
+	}
+
 	// Use this for initialization
 	void Start () {
 		rm = GameObject.FindObjectOfType<ResourceManager> ();
 		rm.loseResource ("Water", value);
-
-		eyeCenter = GameObject.Find ("CenterEyeAnchor");
 	}
 
 	// Update is called once per frame

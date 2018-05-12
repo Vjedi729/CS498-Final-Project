@@ -10,10 +10,13 @@ public class Edible : MonoBehaviour {
 	private float eatDistance = 0.175f;
 	private GameObject eyeCenter;
 
-	// Use this for initialization
-	void Start () {
+	void Start() {
 		rm = GameObject.FindObjectOfType<ResourceManager> ();
 		rm.loseResource ("Food", value);
+	}
+
+	// Use this for initialization
+	void Awake () {
 		eyeCenter = GameObject.Find ("CenterEyeAnchor");
 	}
 	

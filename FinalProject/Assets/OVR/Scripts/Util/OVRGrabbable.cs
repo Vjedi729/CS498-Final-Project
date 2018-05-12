@@ -153,6 +153,10 @@ public class OVRGrabbable : MonoBehaviour
         }
     }
 
+	public void setColliders(Collider[] colliders) {
+		this.m_grabPoints = colliders;
+	}
+
     protected virtual void Start()
     {
         m_grabbedKinematic = GetComponent<Rigidbody>().isKinematic;
