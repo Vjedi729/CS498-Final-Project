@@ -21,11 +21,6 @@ public class AutomaticRoomScaler : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		//gameObject.transform.position = OVRManager.tracker.GetPose (0).position;
-		OVRManager.instance.trackingOriginType = OVRManager.TrackingOrigin.FloorLevel;
-
-		//Debug.Log (transform.position);
-
 		if (OVRManager.boundary.GetConfigured ()) {
 			roomDim = OVRManager.boundary.GetDimensions (OVRBoundary.BoundaryType.PlayArea);
 			roomDim.x -= 2*wallToSpaceBuffer;
