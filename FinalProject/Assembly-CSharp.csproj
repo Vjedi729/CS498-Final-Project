@@ -243,6 +243,7 @@
      <Compile Include="Assets\OvrAvatar\Scripts\OvrAvatarSkinnedMeshRenderPBSComponent.cs" />
      <Compile Include="Assets\OvrAvatar\Scripts\OvrAvatarSkinnedMeshRenderPBSV2Component.cs" />
      <Compile Include="Assets\OvrAvatar\Scripts\OvrAvatarTouchController.cs" />
+     <Compile Include="Assets\Scripts\Announcer.cs" />
      <Compile Include="Assets\Scripts\AutomaticRoomScaler.cs" />
      <Compile Include="Assets\Scripts\BotDispatch.cs" />
      <Compile Include="Assets\Scripts\Drinkable.cs" />
@@ -254,6 +255,7 @@
      <Compile Include="Assets\Scripts\ResourceManager.cs" />
      <Compile Include="Assets\Scripts\SanityChecker.cs" />
      <Compile Include="Assets\Scripts\SetGlobalScale.cs" />
+     <Compile Include="Assets\Scripts\SetPositionToRoom.cs" />
      <Compile Include="Assets\Scripts\ShouldSanityCheck.cs" />
      <Compile Include="Assets\Scripts\SpringGrabbable.cs" />
      <Compile Include="Assets\Scripts\SpringGrabber.cs" />

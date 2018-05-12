@@ -7,6 +7,14 @@
       <File FileName="Assets\OVR\Scripts\OVRPlugin.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\SpringGrabber.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\UIManager.cs" Line="57" Column="17" />
+      <File FileName="Assets\Scripts\WaterDispenser.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\SetGlobalScale.cs" Line="27" Column="1" />
+      <File FileName="Assets\Scripts\FoodDispenser.cs" Line="1" Column="1" />
+      <File FileName="Assets\OVR\Scripts\Util\OVRGrabbable.cs" Line="1" Column="1" />
+      <File FileName="Assets\OVR\Scripts\Util\OVRGrabber.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\AutomaticRoomScaler.cs" Line="7" Column="2" />
+      <File FileName="Assets\Scripts\SetPositionToRoom.cs" Line="30" Column="5" />
+      <File FileName="Assets\Scripts\Lever.cs" Line="24" Column="19" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
